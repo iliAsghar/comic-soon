@@ -1,0 +1,9 @@
+# node modules:
+node_modules/
+
+# rc's :
+.htmlhintrc
+.stylelintrc.json
+eslint.config.mjs
+package-lock.json
+package.json
