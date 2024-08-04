@@ -3,27 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./assets/stylesheets/home.css" rel="stylesheet">
   <title>Comic Soon</title>
 </head>
 <body>
   <header class="header">
     <div class="header__top">
-      <h2 class="header__icon">CS</h2>
-      <input class="header__searchbar" name="searchbar" type="search">
-      <ul class="header__list">
-        <li class="header__list-item"><a href="#" title="Signup/Login">SignUp/Login</a></li>
-        <li class="header__list-item">color</li>
-      </ul>
+      <div class="header__profile"></div>
+      <h2 class="header__icon"><a class="header__icon-link" href="/src/home.html" title="Comic Soon">CS</a></h2>
+      <nav class="nav">
+        <ul class="nav__list nav__list--active">
+          <li class="nav__item">Home</li>
+          <li class="nav__item">Search</li>
+          <li class="nav__item">Comics</li>
+          <li class="nav__item">Gallery</li>
+          <li class="nav__item">Sign Up</li>
+          <li class="nav__item">Login</li>
+          <li class="nav__item">About Us</li>
+        </ul>
+      </nav>
+      <div class="header__hamburger header__hamburger--active">
+        <div class="header__hamburger-line"></div>
+        <div class="header__hamburger-line"></div>
+        <div class="header__hamburger-line"></div>
+      </div>
     </div>
-    <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav__item">Home</li>
-        <li class="nav__item">Comics</li>
-        <li class="nav__item">Gallery</li>
-        <li class="nav__item">About Us</li>
-      </ul>
-    </nav>
+    
+    <ul class="header__auth">
+
+    </ul>
+    <!-- <p class="header__theme">color</p> -->
+
   </header>
+
+
   <section class="hero">
     <h1 class="hero__title">
       Comic Soon
@@ -91,5 +104,7 @@
       <img class="footer__img" src="." title="" alt="cool guy" />
     </div>
   </footer>
+
+  <script src="./assets/components/header/header.js"></script>
 </body>
 </html>
