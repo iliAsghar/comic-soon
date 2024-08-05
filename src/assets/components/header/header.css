@@ -1,6 +1,10 @@
 @import url('../../fonts/SomersetBarnyard.css');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
+:root {
+  --header-size: auto;
+}
+
 .header {
   background-color: #11101d;
 
@@ -49,20 +53,23 @@
 
 .header__profile {
   position: absolute;
-  background-image: url("./images/default-profile.png");
   background-size: cover;
   background-position: center;
-  filter: brightness(0) saturate(100%) invert(35%) sepia(77%) saturate(4453%) hue-rotate(15deg) brightness(102%) contrast(101%);
   width: 3rem;
   aspect-ratio: 1;
   right: 2rem;
   cursor: pointer;
 }
 
+.header__profile--default {
+  background-image: url("./images/default-profile.png");
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+
 .header__hamburger-line {
   height: 20%;
   width: 100%;
-  background-color: #e45000;
+  background-color: #fff;
   border-radius: 20px;
   transition: all 250ms ease-in-out;
 }
@@ -91,7 +98,8 @@
   flex-direction: column;
   overflow: hidden;
   max-height: 0;
-  transition: all 400ms ease-in-out;
+  transition: transform 400ms ease-in-out,
+              background-color 10ms ease-in-out;
 }
 
 .nav__list--active {
@@ -106,6 +114,7 @@
   background-color: #11101D;
   text-align: left;
   cursor: pointer;
+  transition: all 100ms ease-in-out;
 }
 
 .nav__item + .nav__item {
@@ -125,5 +134,65 @@
 @media (hover:hover) {
   .nav__item:hover {
     background-color: #1c1a2a;
+  }
+
+  .header__hamburger:hover > .header__hamburger-line {
+    background-color: #f15b0a;
+  }
+
+  .header__profile--default:hover {
+    filter: brightness(0) saturate(100%) invert(37%) sepia(21%) saturate(6637%) hue-rotate(4deg) brightness(103%) contrast(92%) !important;
+  }
+}
+
+@media (800px <= width) {
+  .header__top {
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .header__icon {
+    margin-inline: 0;
+  }
+
+  .header__hamburger {
+    display: none;
+  }
+
+  .nav {
+    margin-left: auto;
+    display: block;
+  }
+
+  .nav__list {
+    position: relative;
+    flex-direction: row;
+    overflow: hidden;
+    max-height: none;
+    gap: 2rem;
+  }
+  
+  .nav__item {
+    border: none !important;
+    background-color: transparent !important;
+    font-size: 1.5rem;
+    padding: 0;
+    min-width: max-content;
+  }
+
+  .header__profile {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    width: 3rem;
+    aspect-ratio: 1;
+    right: auto;
+    cursor: pointer;
+  }  
+
+  @media (hover:hover) {
+    .nav__item:hover {
+      color: #f15b0a;
+    }
   }
 }

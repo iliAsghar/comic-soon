@@ -1,4 +1,5 @@
 "use strict";
+import { executeWithDelay } from "../../scripts/utils.js";
 
 const navBar = document.querySelector('.nav__list');
 const navHamburgerMenu = document.querySelector('.header__hamburger');
@@ -8,4 +9,6 @@ function toggleNavbar() {
   navHamburgerMenu.classList.toggle('header__hamburger--active');
 }
 
-navHamburgerMenu.addEventListener('click', toggleNavbar);
+navHamburgerMenu.addEventListener('click', () => {
+  executeWithDelay(toggleNavbar);
+});
