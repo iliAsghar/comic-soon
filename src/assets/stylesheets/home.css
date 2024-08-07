@@ -1,2 +1,41 @@
 @import url('./reset.css');
 @import url('../components/header/header.css');
+@import url('../fonts/SomersetBarnyard.css');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('../fonts/KomikaAxis.css');
+
+
+.hero {
+  position: relative;
+}
+
+.hero__bg {
+  background: #0b09099f url("../images/b&w-comic-wallpaper.jpg") no-repeat center;
+  min-height: 100dvh;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+.hero__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  text-align: center;
+}
+
+.hero__title {
+  font-size: 13rem;
+  font-family: "Somerset Barnyard", cursive;
+  color: #e45000;
+  text-shadow: 0 0 1000px black;
+  line-height: 1em;
+}
+
+.hero__text {
+  color: #fff;
+  background-color: #e45000;
+  font-size: 2rem;
+  font-family: "Komika Axis", sans-serif;
+  line-height: normal;
+}
