@@ -7,6 +7,7 @@
 
 .hero {
   position: relative;
+  user-select: none;
 }
 
 .hero__bg {
@@ -28,7 +29,7 @@
   font-size: 13rem;
   font-family: "Somerset Barnyard", cursive;
   color: #e45000;
-  text-shadow: 0 0 1000px black;
+  text-shadow: 0 0 200px black;
   line-height: 1em;
 }
 
