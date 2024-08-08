@@ -7,7 +7,7 @@
 
 .header {
   -webkit-tap-highlight-color: transparent;
-  background-color: #11101d;
+  background-color: #11101ddd;
 
   /* styles */
   color: #fff;
@@ -111,7 +111,7 @@
   font-size: 1.5rem;
   width: 100%;
   padding: 1rem 1.5rem;
-  background-color: #11101D;
+  background-color: #11101deb;
   text-align: left;
   cursor: pointer;
   transition: all 100ms ease-in-out;
@@ -122,7 +122,7 @@
 }
 
 .nav__item:nth-child(odd) {
-  background-color: #0b0a12;
+  background-color: #0b0a12e6;
 }
 
 @media (hover:hover) {
