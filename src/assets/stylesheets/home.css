@@ -29,7 +29,7 @@
   font-size: 13rem;
   font-family: "Somerset Barnyard", cursive;
   color: #e45000;
-  text-shadow: 0 0 200px black;
+  text-shadow: 0 0 200px #000;
   line-height: 1em;
 }
 
