@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Super Squad";
+  src: local("Super Squad"),
+       url('./Super\ Squad.woff2');
+}
+
+@font-face {
+  font-family: "Super Squad";
+  src: local("Super Squad"),
+       url('Super\ Squad\ Italic.woff2');
+  font-style: italic;
+}

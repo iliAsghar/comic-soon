@@ -1,0 +1,5 @@
+@font-face {
+  font-family: Yikes;
+  src: local('Yikes'),
+       url('./YIKES.woff2');
+}
