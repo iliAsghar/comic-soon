@@ -1,0 +1,107 @@
+.release {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3rem 5rem;
+  overflow: hidden;
+  background-color: #111;
+}
+
+.release__title {
+  text-align: center;
+  color: #e45000;
+  font-size: 5rem;
+  font-family: "Somerset barnyard", sans-serif;
+  margin-bottom: 2rem;
+  text-decoration: underline;
+}
+
+.release__card {
+  --radius : 4% 95% 6% 95%/95% 4% 92% 5%;
+
+  box-shadow: 0 0 0 0 #e45000;
+  position: relative;
+  font-size: 1.5rem;
+  border: solid #e45000;
+  border-width: 6px 3px 5px 4px;
+  border-radius: var(--radius);
+  background-color: rgba(0, 0, 0, 63.3%);
+  background-image: url('../../images/neon-knights.jfif');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  width: min(100%, 80rem);
+  transition: all 250ms ease-in-out;
+  user-select: none;
+}
+
+.release__card + .release__card {
+  margin-top: 3rem;
+}
+
+/* todo might add something */
+.release__card::before {
+  content: '';
+  position: absolute;
+}
+
+.release__card:nth-child(odd) {
+  --radius : 95% 4% 92% 5%/4% 95% 6% 95%;
+}
+
+.release__card__content {
+  padding: 2rem 3rem 3rem;
+  color: #fff;
+  font-style: italic;
+}
+
+.release__card__main {
+  font-family: "Super Squad", sans-serif;
+  font-size: min(1rem + 2vw, 3rem);
+  letter-spacing: 2px;
+}
+
+.release__card__chapter {
+  font-family: "Komika Axis", sans-serif;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  width: max-content;
+  color: #000;
+  font-size: 1.5rem;
+  font-size: min(.5rem + 2vw, 1.5rem);
+}
+
+.release__card__desc {
+  font-family: Poppins, sans-serif;
+  max-width: 50rem;
+  font-style: normal;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.release__card__btn {
+  display: block;
+  color: #fff;
+  font-family: Poppins, sans-serif;
+  font-style: normal;
+  padding: 1rem 2rem;
+  background-color: #ffffff39;
+  border-radius: var(--radius);
+  text-decoration: none;
+  box-shadow: 0 0 0 2px #e45000;
+  transition: all 250ms ease-in-out;
+  width: min(100%, 20rem);
+}
+
+@media (hover:hover) {
+  .release__card__btn:hover {
+    background-color: #e45000;
+  }
+  
+  .release__card:hover {
+    width: min(100%, 85rem);
+    box-shadow: 0 0 15px -5px rgba(224, 71, 15, 76.4%);
+  }
+}
