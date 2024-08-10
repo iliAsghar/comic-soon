@@ -1,0 +1,76 @@
+.spotlight {
+  display: flex;
+  flex-direction: column;
+  background-color: #e3dddb;
+  padding: 1rem 3rem 5rem;
+  gap: 3rem;
+  text-align: center;
+}
+
+.spotlight > * {
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+}
+
+.spotlight__main-title {
+  font-family:  "Somerset barnyard", sans-serif;
+  font-size: min(1.5rem + 2vw, 5rem);
+  color: #e45000;
+  text-decoration: underline;
+  transition: all 250ms ease-in-out;
+}
+
+.spotlight__book {
+  aspect-ratio: 5.5 / 7.5;
+  width: 60%;
+  margin-inline: auto;
+  position: relative;
+  margin-bottom: 1rem;
+  transition: all 250ms ease-in-out;
+}
+
+.spotlight__book::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: -5px;
+  width: 10px;
+  height: 99%;
+  background-size: 10px 14px;
+  background-image: radial-gradient(circle at 40% 5%, transparent 70%, #555 20%);
+}
+
+.spotlight__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.spotlight__comic-title {
+  font-family: "Super Squad", sans-serif;
+  font-size: min(1rem + 2vw, 3rem);
+  margin-bottom: 1rem;
+  transition: all 250ms ease-in-out;
+}
+
+@media (width >= 600px) {
+  .spotlight {
+    flex-direction: row;
+    gap: 7rem;
+  } 
+}
+
+@media (hover:hover) {
+  .spotlight > *:hover {
+    transform: scale(1.1);
+  }
+  
+  .spotlight > *:hover > .spotlight__book {
+    box-shadow: 0 0 20px -4px #000;
+  }
+
+  .spotlight > *:hover > .spotlight__main-title,
+  .spotlight > *:hover > .spotlight__comic-title {
+    text-shadow: 0 0 15px #00000024;
+  }
+}
