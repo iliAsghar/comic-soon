@@ -1,14 +1,31 @@
 .spotlight {
+  z-index: 1;
+  position: relative;
   display: flex;
   flex-direction: column;
   background-color: #e3dddb;
-  padding: 1rem 3rem 5rem;
+  padding: 1rem 1rem 5rem;
   gap: 3rem;
   text-align: center;
 }
 
+.spotlight::after {
+  position: absolute;
+  content: "";
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 62% 100%, 50% 50%, 38% 100%, 0% 100%);
+  background-color: #e3dddb;
+  transform: translateY(-5px);
+}
+
 .spotlight > * {
   transition: all 250ms ease-in-out;
+}
+
+.spotlight > * > * {
   cursor: pointer;
 }
 
@@ -18,6 +35,8 @@
   color: #e45000;
   text-decoration: underline;
   transition: all 250ms ease-in-out;
+  width: fit-content;
+  margin-inline: auto;
 }
 
 .spotlight__book {
@@ -27,6 +46,14 @@
   position: relative;
   margin-bottom: 1rem;
   transition: all 250ms ease-in-out;
+}
+
+.spotlight__week > .spotlight__book {
+  transform: rotate(-2deg);
+}
+
+.spotlight__month > .spotlight__book {
+  transform: rotate(2deg);
 }
 
 .spotlight__book::after {
@@ -51,26 +78,29 @@
   font-size: min(1rem + 2vw, 3rem);
   margin-bottom: 1rem;
   transition: all 250ms ease-in-out;
+  width: fit-content;
+  margin-inline: auto;
 }
 
 @media (width >= 600px) {
   .spotlight {
     flex-direction: row;
     gap: 7rem;
+    padding: 1rem 3rem 5rem;
   } 
 }
 
 @media (hover:hover) {
-  .spotlight > *:hover {
+  .spotlight > *:has( *:hover) {
     transform: scale(1.1);
   }
   
-  .spotlight > *:hover > .spotlight__book {
+  .spotlight > * > *:hover > .spotlight__book {
     box-shadow: 0 0 20px -4px #000;
   }
 
-  .spotlight > *:hover > .spotlight__main-title,
-  .spotlight > *:hover > .spotlight__comic-title {
+  .spotlight > * > *:hover > .spotlight__main-title,
+  .spotlight > * > *:hover > .spotlight__comic-title {
     text-shadow: 0 0 15px #00000024;
   }
 }

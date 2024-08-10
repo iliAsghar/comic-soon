@@ -1,5 +1,4 @@
 @import url('./reset.css');
-@import url('../components/header/header.css');
 @import url('../fonts/SomersetBarnyard/SomersetBarnyard.css');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('../fonts/KomikaAxis/KomikaAxis.css');
@@ -8,6 +7,9 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url('../fonts/Chawp/Chawp.css');
+
+/* header section : */
+@import url('../components/header/header.css');
 
 /* hero section :  */
 @import url('./home/home-hero.css');
@@ -18,5 +20,8 @@
 /* gallery section :  */
 @import url('./home/home-gallery.css');
 
-/* spotlight section */
+/* spotlight section : */
 @import url('./home/home.spotlight.css');
+
+/* footer section : */
+@import url('../components/footer/footer.css');

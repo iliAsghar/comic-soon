@@ -21,7 +21,6 @@
   background: #0b0909ae url("../../images/b&w-comic-wallpaper.jpg") no-repeat center;
   min-height: 120dvh;
   background-size: cover;
-  background-attachment: fixed;
   background-blend-mode: multiply;
 }
 

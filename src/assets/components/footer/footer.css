@@ -1,0 +1,73 @@
+@import url('../fonts/SomersetBarnyard/SomersetBarnyard.css');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+.footer {
+  padding-top: 5rem;
+  position: relative;
+  z-index: 0;
+  background: radial-gradient(circle, #272f27 10%, transparent 11%),radial-gradient(circle at bottom left, #272f27 5%, transparent 6%),radial-gradient(circle at bottom right, #272f27 5%, transparent 6%),radial-gradient(circle at top left, #272f27 5%, transparent 6%),radial-gradient(circle at top right, #272f27 5%, transparent 6%);
+  background-size: 3em 3em;
+  background-color: #252525;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 40rem 20rem;
+  grid-template-areas: "cc"
+                       "im";
+}
+
+.footer__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top right;
+  align-self: flex-end;
+  grid-area: im;
+  filter: brightness(.8) contrast(1.2) saturate(1.1);
+}
+
+.footer__content {
+  padding: 10rem 3rem;
+  grid-area: cc;
+  align-self: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: space-around;
+  margin-left: 3rem;
+}
+
+.footer__content__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__content__list-item {
+  font-family: Rubik, sans-serif;
+  font-size: min(1rem + 1.5vw, 2rem);
+  width: max-content;
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
+}
+
+@media (width >= 500px) {
+  .footer {
+    grid-template: 350px / 1fr 25% 25% 25%;
+    grid-template-areas: "im cc cc cc";
+  }
+
+  .footer__img {
+    padding-top: 10rem;
+  }
+
+  .footer__content {
+    flex-direction: row;
+  }
+}
+
+@media (hover:hover) {
+  .footer__content__list-item:hover {
+    color: #e45000;
+  }
+}
